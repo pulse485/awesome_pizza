@@ -32,8 +32,6 @@ public class OrderProcessingSimulator {
 
             System.out.println("Order completed: " + nextOrder.getId());
 
-            orderService.fulfillNextOrder();
-
         } else {
             System.out.println("No pending orders to process.");
         }
@@ -41,7 +39,8 @@ public class OrderProcessingSimulator {
 
     private void simulatePizzaPreparation() {
         try {
-            Thread.sleep(10000);
+            Thread.sleep(3000);
+            System.out.println("Order in progress");
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             System.err.println("Interrupted while simulating pizza preparation.");

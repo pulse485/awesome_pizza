@@ -1,1 +1,4 @@
+com\example\awesome_pizza\service\OrderServiceTest.class
 com\example\awesome_pizza\AwesomePizzaApplicationTests.class
+com\example\awesome_pizza\controller\OrderControllerTest.class
+com\example\awesome_pizza\core\OrderProcessingSimulatorTest.class
