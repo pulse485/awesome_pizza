@@ -36,19 +36,19 @@ The Awesome Pizza Ordering System is a web-based application built using Spring 
 
 1. Clone the repository:
 
-  git clone https://github.com/your-username/awesome-pizza.git
+ - git clone https://github.com/your-username/awesome-pizza.git
 
 2. Navigate to the project directory:
 
-  cd awesome-pizza
+ - cd awesome-pizza
 
 3. Build the project using Maven:
 
-  mvn clean install
+ - mvn clean install
 
 4. Run the application:
 
-  mvn spring-boot:run
+ - mvn spring-boot:run
 
 5. Open postman (or any rest client) and trigger the endpoint:  
     - to get and order: http://localhost:8080/api/orders/50e09e0e-f3c4-46e6-ab85-bfb2acbf20a0 (GET CALL)
