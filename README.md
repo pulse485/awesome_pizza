@@ -50,7 +50,7 @@ The Awesome Pizza Ordering System is a web-based application built using Spring 
    - mvn spring-boot:run
 
 ## Usage
- Open postman (or any rest client) and trigger the endpoint:  
+Open postman (or any rest client) and trigger the endpoint:  
     - to get and order: http://localhost:8080/api/orders/50e09e0e-f3c4-46e6-ab85-bfb2acbf20a0 (GET CALL)
     - to put a new order: http://localhost:8080/api/orders (POST CALL)
 
