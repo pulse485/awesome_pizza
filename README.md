@@ -10,8 +10,7 @@ This is a simple project for managing pizza orders in a restaurant. It provides 
 - [Setup](#setup)
 - [Usage](#usage)
 - [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 
@@ -50,6 +49,10 @@ The Awesome Pizza Ordering System is a web-based application built using Spring 
 
    - mvn spring-boot:run
 
-5. Open postman (or any rest client) and trigger the endpoint:  
+## Usage
+ Open postman (or any rest client) and trigger the endpoint:  
     - to get and order: http://localhost:8080/api/orders/50e09e0e-f3c4-46e6-ab85-bfb2acbf20a0 (GET CALL)
     - to put a new order: http://localhost:8080/api/orders (POST CALL)
+
+## Testing
+ There are the junit in the relative test folder of the project
