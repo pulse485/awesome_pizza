@@ -28,6 +28,10 @@ public class OrderService {
         return orderMap.get(orderId);
     }
 
+    public List<Order> getAllOrders() {
+        return orderMap.values().stream().toList();
+    }
+
     public void updateOrderStatus(String orderId, OrderStatus newStatus) {
         Order order = orderMap.get(orderId);
         if (order != null) {

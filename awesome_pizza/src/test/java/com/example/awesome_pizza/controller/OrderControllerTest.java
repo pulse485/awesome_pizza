@@ -11,6 +11,11 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import static java.util.Collections.emptyList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
@@ -58,6 +63,32 @@ class OrderControllerTest {
 
         assertEquals(HttpStatus.NOT_FOUND, responseEntity.getStatusCode());
         verify(orderService, times(1)).getOrder(orderId);
+    }
+
+    @Test
+    void testGetOrdersWhenOrdersExist() {
+        // Mocking behavior of orderService
+        List<Order> orders = new ArrayList<>();
+        orders.add(new Order("1", OrderStatus.PENDING ));
+        when(orderService.getAllOrders()).thenReturn(orders);
+
+        // Calling the controller method
+        ResponseEntity<List<Order>> responseEntity = orderController.getOrders();
+
+        // Validating the response
+        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+        assertEquals(orders, responseEntity.getBody());
+    }
+
+    @Test
+    void testGetOrdersWhenNoOrdersExist() {
+
+        when(orderService.getAllOrders()).thenReturn(emptyList());
+
+        ResponseEntity<List<Order>> responseEntity = orderController.getOrders();
+
+        assertEquals(HttpStatus.NOT_FOUND, responseEntity.getStatusCode());
+        assertEquals(null, responseEntity.getBody());
     }
 }
 
